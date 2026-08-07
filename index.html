@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"/>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -213,12 +214,15 @@
   .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
   .skill-tag {
     font-family: var(--font-mono); font-size: 0.72rem;
-    padding: 0.3rem 0.75rem;
+    padding: 0.35rem 0.75rem;
     border: 1px solid var(--border);
     color: var(--muted);
-    transition: border-color 0.2s, color 0.2s;
+    display: inline-flex; align-items: center; gap: 0.45rem;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
   }
-  .skill-tag:hover { border-color: var(--accent); color: var(--accent); }
+  .skill-tag i { font-size: 0.95rem; display: inline-block; vertical-align: middle; }
+  .skill-tag svg { width: 14px; height: 14px; flex-shrink: 0; stroke: currentColor; }
+  .skill-tag:hover { border-color: var(--accent); color: var(--text); background: rgba(200,240,80,0.05); }
 
   /* Experience */
   .exp-item { display: grid; grid-template-columns: 200px 1fr; gap: 3rem; padding: 2.5rem 0; border-bottom: 1px solid var(--border); }
@@ -498,61 +502,61 @@
     <div class="skill-group">
       <div class="skill-group-title">Languages</div>
       <div class="skill-tags">
-        <span class="skill-tag">JavaScript (ES6+)</span>
-        <span class="skill-tag">TypeScript</span>
-        <span class="skill-tag">Python</span>
+        <span class="skill-tag"><i class="devicon-javascript-plain colored"></i> JavaScript (ES6+)</span>
+        <span class="skill-tag"><i class="devicon-typescript-plain colored"></i> TypeScript</span>
+        <span class="skill-tag"><i class="devicon-python-plain colored"></i> Python</span>
       </div>
     </div>
     <div class="skill-group">
       <div class="skill-group-title">Frontend</div>
       <div class="skill-tags">
-        <span class="skill-tag">React.js</span>
-        <span class="skill-tag">Vite</span>
-        <span class="skill-tag">HTML5</span>
-        <span class="skill-tag">CSS3</span>
-        <span class="skill-tag">Tailwind CSS</span>
+        <span class="skill-tag"><i class="devicon-react-original colored"></i> React.js</span>
+        <span class="skill-tag"><i class="devicon-vitejs-plain colored"></i> Vite</span>
+        <span class="skill-tag"><i class="devicon-html5-plain colored"></i> HTML5</span>
+        <span class="skill-tag"><i class="devicon-css3-plain colored"></i> CSS3</span>
+        <span class="skill-tag"><i class="devicon-tailwindcss-original colored"></i> Tailwind CSS</span>
       </div>
     </div>
     <div class="skill-group">
       <div class="skill-group-title">Backend</div>
       <div class="skill-tags">
-        <span class="skill-tag">Node.js</span>
-        <span class="skill-tag">Express.js</span>
-        <span class="skill-tag">RESTful APIs</span>
-        <span class="skill-tag">JWT Auth</span>
-        <span class="skill-tag">Socket.IO</span>
-        <span class="skill-tag">WebRTC</span>
+        <span class="skill-tag"><i class="devicon-nodejs-plain colored"></i> Node.js</span>
+        <span class="skill-tag"><i class="devicon-express-original colored"></i> Express.js</span>
+        <span class="skill-tag"><i class="devicon-fastapi-plain colored"></i> RESTful APIs</span>
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z"/><path d="M12 11a2 2 0 100-4 2 2 0 000 4z"/><path d="M12 11v5"/></svg> JWT Auth</span>
+        <span class="skill-tag"><i class="devicon-socketio-original colored"></i> Socket.IO</span>
+        <span class="skill-tag"><i class="devicon-webrtc-plain colored"></i> WebRTC</span>
       </div>
     </div>
     <div class="skill-group">
       <div class="skill-group-title">Database &amp; CS Fundamentals</div>
       <div class="skill-tags">
-        <span class="skill-tag">MongoDB</span>
-        <span class="skill-tag">SQL</span>
-        <span class="skill-tag">OOP</span>
-        <span class="skill-tag">DSA</span>
-        <span class="skill-tag">DBMS</span>
+        <span class="skill-tag"><i class="devicon-mongodb-plain colored"></i> MongoDB</span>
+        <span class="skill-tag"><i class="devicon-azuresqldatabase-plain colored"></i> SQL</span>
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg> OOP</span>
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="18" r="3"/><line x1="8.5" y1="7.5" x2="15.5" y2="7.5"/><line x1="7.5" y1="8.5" x2="10.5" y2="15.5"/><line x1="16.5" y1="8.5" x2="13.5" y2="15.5"/></svg> DSA</span>
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg> DBMS</span>
       </div>
     </div>
     <div class="skill-group">
       <div class="skill-group-title">Cloud &amp; DevOps</div>
       <div class="skill-tags">
-        <span class="skill-tag">AWS (EC2, S3)</span>
-        <span class="skill-tag">Docker</span>
-        <span class="skill-tag">Linux</span>
-        <span class="skill-tag">CI/CD (GitHub Actions)</span>
-        <span class="skill-tag">Shell Scripting</span>
+        <span class="skill-tag"><i class="devicon-amazonwebservices-plain-wordmark colored"></i> AWS (EC2, S3)</span>
+        <span class="skill-tag"><i class="devicon-docker-plain colored"></i> Docker</span>
+        <span class="skill-tag"><i class="devicon-linux-plain colored"></i> Linux</span>
+        <span class="skill-tag"><i class="devicon-githubactions-plain colored"></i> CI/CD (GitHub Actions)</span>
+        <span class="skill-tag"><i class="devicon-bash-plain colored"></i> Shell Scripting</span>
       </div>
     </div>
     <div class="skill-group">
       <div class="skill-group-title">Tools &amp; AI-Assisted Dev</div>
       <div class="skill-tags">
-        <span class="skill-tag">Git &amp; GitHub</span>
-        <span class="skill-tag">Postman</span>
-        <span class="skill-tag">VS Code</span>
-        <span class="skill-tag">WebAssembly</span>
-        <span class="skill-tag">Google AI Studio</span>
-        <span class="skill-tag">Antigravity IDE</span>
+        <span class="skill-tag"><i class="devicon-git-plain colored"></i> Git &amp; GitHub</span>
+        <span class="skill-tag"><i class="devicon-postman-plain colored"></i> Postman</span>
+        <span class="skill-tag"><i class="devicon-vscode-plain colored"></i> VS Code</span>
+        <span class="skill-tag"><i class="devicon-webassembly-plain colored"></i> WebAssembly</span>
+        <span class="skill-tag"><i class="devicon-google-plain colored"></i> Google AI Studio</span>
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z"/></svg> Antigravity IDE</span>
       </div>
     </div>
   </div>
