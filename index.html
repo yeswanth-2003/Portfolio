@@ -3,7 +3,14 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Chepuri Yeswanth — MERN Stack Developer</title>
+<title>Chepuri Yeswanth — MERN Stack Developer &amp; Electrical Engineer</title>
+<meta name="description" content="Chepuri Yeswanth is a MERN Stack Developer and Electrical &amp; Electronics Engineering graduate based in Andhra Pradesh, India, building full-stack web apps with React, Node.js, Express, and MongoDB, AWS DevOps practices, and AI-assisted (vibecoding) workflows."/>
+<meta name="keywords" content="Chepuri Yeswanth, MERN Stack Developer, Full Stack Developer, React Developer, Node.js Developer, Express.js, MongoDB, JavaScript Developer, AWS DevOps, Docker, CI/CD, Electrical and Electronics Engineer, EEE graduate, Electric Vehicle Engineer, Embedded Systems, Power Electronics, MATLAB Simulink, Vibecoding, AI-assisted Development, Prompt Engineering, LLM Developer, Andhra Pradesh Developer, Bengaluru Software Engineer, Entry Level Software Engineer India, DevOps Engineer India"/>
+<meta name="author" content="Chepuri Yeswanth"/>
+<meta property="og:title" content="Chepuri Yeswanth — MERN Stack Developer & Electrical Engineer"/>
+<meta property="og:description" content="Full-stack web developer and Electrical & Electronics Engineering graduate building React/Node apps, browser-native tools, and AI-assisted software."/>
+<meta property="og:type" content="website"/>
+<meta name="robots" content="index, follow"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
@@ -81,11 +88,11 @@
     color: var(--text); text-decoration: none;
   }
   .nav-logo span { color: var(--accent); }
-  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links { display: flex; gap: 1.75rem; list-style: none; flex-shrink: 0; }
   .nav-links a {
-    font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.1em;
+    font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em;
     color: var(--muted); text-decoration: none; text-transform: uppercase;
-    transition: color 0.2s;
+    transition: color 0.2s; white-space: nowrap;
   }
   .nav-links a:hover { color: var(--accent); }
 
@@ -93,7 +100,7 @@
   #hero {
     min-height: 100vh;
     display: flex; flex-direction: column; justify-content: flex-end;
-    padding: 0 3rem 5rem;
+    padding: 9rem 3rem 5rem;
     position: relative; overflow: visible;
   }
   .hero-grid-bg {
@@ -122,23 +129,29 @@
     content: ''; width: 40px; height: 1px; background: var(--accent);
   }
   .hero-name {
-    font-size: clamp(2.4rem, 11vw, 8rem);
+    font-size: clamp(2.2rem, 9.5vw, 7rem);
     font-weight: 800; line-height: 0.92;
     letter-spacing: -0.04em;
     margin-bottom: 2rem;
+    max-width: 100%;
   }
+  .hero-name div { white-space: nowrap; display: block; }
   @media (max-width: 600px) {
     .hero-name {
-      /* "YESWANTH" is 8 chars — ~11.5vw per char fits it safely */
-      font-size: 10.5vw;
+      font-size: 9vw;
       letter-spacing: -0.01em;
-      white-space: nowrap;
     }
   }
   .hero-name .line2 { color: transparent; -webkit-text-stroke: 1px rgba(240,237,230,0.3); }
   .hero-desc {
     font-family: var(--font-mono); font-size: 0.85rem; color: var(--muted);
     max-width: 400px; line-height: 1.7; margin-bottom: 3rem;
+  }
+  .hero-quote {
+    font-family: var(--font-mono); font-size: 0.85rem; font-style: italic;
+    color: var(--text); max-width: 480px; line-height: 1.6;
+    margin-bottom: 1.75rem; padding-left: 1.1rem;
+    border-left: 2px solid var(--accent);
   }
   .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
   .btn-primary {
@@ -291,6 +304,35 @@
   }
   .cert-title { font-size: 1rem; font-weight: 700; margin-bottom: 0.25rem; }
   .cert-issuer { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent); }
+
+  /* Resumes */
+  .resumes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); }
+  .resume-card {
+    background: var(--bg); padding: 2rem;
+    display: flex; flex-direction: column; gap: 1rem;
+    transition: background 0.3s;
+  }
+  .resume-card:hover { background: var(--bg3); }
+  .resume-label {
+    font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em;
+    color: var(--accent2); text-transform: uppercase;
+  }
+  .resume-title { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.02em; }
+  .resume-note {
+    font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); line-height: 1.7;
+  }
+  .resume-btn {
+    align-self: flex-start; margin-top: 0.5rem;
+    padding: 0.65rem 1.5rem; background: transparent; color: var(--text);
+    font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.08em;
+    text-decoration: none; text-transform: uppercase;
+    border: 1px solid var(--border);
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+  }
+  .resume-btn:hover { border-color: var(--accent); color: var(--accent); background: rgba(200,240,80,0.05); }
+  @media (max-width: 768px) {
+    .resumes-grid { grid-template-columns: 1fr; }
+  }
   /* Contact / Footer */
   #contact {
     background: var(--bg);
@@ -376,11 +418,18 @@
   /* Tablet */
   @media (max-width: 1024px) {
     nav { padding: 1.25rem 2rem; }
-    #hero { padding: 0 2rem 4rem; }
+    #hero { padding: 8rem 2rem 4rem; }
     section { padding: 5rem 2rem; }
     #about { gap: 3rem; }
     .exp-item { gap: 2rem; }
     .projects-grid, .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* Nav switches to hamburger a bit earlier than the rest of the mobile layout,
+     so 6 nav links never get squeezed and clipped at in-between widths */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .nav-toggle { display: flex; }
   }
 
   /* Mobile */
@@ -389,7 +438,7 @@
     .nav-links { display: none; }
     .nav-toggle { display: flex; }
 
-    #hero { padding: 0 1.5rem 4rem; min-height: 100svh; }
+    #hero { padding: 7.5rem 1.5rem 4rem; min-height: 100svh; }
     .hero-orb { width: 300px; height: 300px; top: -50px; right: -80px; }
     .hero-orb2 { width: 220px; height: 220px; left: 50px; bottom: 60px; }
     .hero-ctas { flex-direction: column; align-items: flex-start; }
@@ -417,7 +466,8 @@
 
   /* Small phones */
   @media (max-width: 400px) {
-    .hero-name { letter-spacing: -0.03em; }
+    #hero { padding-top: 7rem; }
+    .hero-name { letter-spacing: -0.03em; font-size: 8.5vw; }
     .about-stats { grid-template-columns: 1fr; }
     .stat-box { padding: 1.25rem; }
   }
@@ -435,6 +485,8 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#resumes">Resumes</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
@@ -447,6 +499,8 @@
   <a href="#skills" class="menu-link">Skills</a>
   <a href="#experience" class="menu-link">Experience</a>
   <a href="#projects" class="menu-link">Projects</a>
+  <a href="#education" class="menu-link">Education</a>
+  <a href="#resumes" class="menu-link">Resumes</a>
   <a href="#contact" class="menu-link">Contact</a>
 </div>
 
@@ -455,12 +509,13 @@
   <div class="hero-orb"></div>
   <div class="hero-orb2"></div>
 
-  <div class="hero-tag">MERN Stack Developer</div>
+  <div class="hero-tag">Electrical Engineer → MERN Developer</div>
   <h1 class="hero-name">
     <div>CHEPURI</div>
     <div class="line2">YESWANTH</div>
   </h1>
-  <p class="hero-desc">Building responsive web apps, RESTful APIs &amp; secure backend systems. Based in Andhra Pradesh, India.</p>
+  <p class="hero-quote">"Jack of all trades, master of none, but oftentimes better than a master of one."</p>
+  <p class="hero-desc">Started out designing circuits and grid systems, ended up shipping full-stack web apps, and now vibecode a good chunk of my projects with AI doing the heavy lifting. Based in Andhra Pradesh, India.</p>
   <div class="hero-ctas">
     <a href="#projects" class="btn-primary">View Projects</a>
   </div>
@@ -471,10 +526,10 @@
   <div class="about-text fade-in">
     <div class="section-label">About me</div>
     <h2 class="section-title">Building for<br/>the web.</h2>
-    <p>I'm a <strong>MERN Stack Developer</strong> with internship experience building production-grade web applications, RESTful APIs, and secure backend systems.</p>
-    <p>My stack spans <strong>React.js, Node.js, Express.js, and MongoDB</strong>, with additional knowledge in <strong>AWS Cloud, Docker, and DevOps practices</strong>.</p>
-    <p>I'm passionate about clean code, intuitive interfaces, and cloud infrastructure — always looking for opportunities to ship meaningful products.</p>
-    <p>This portfolio is <strong>fully automated with CI/CD pipelines</strong> and deployed as a <strong>Docker containerized</strong> application — reflecting the DevOps mindset I bring to every project.</p>
+    <p>I started out as an <strong>Electrical and Electronics Engineering graduate</strong> — substations, power systems, embedded protocols, EV powertrains, the works — before falling headfirst into <strong>full-stack web development</strong>. Somewhere in between, I picked up <strong>vibecoding</strong>: describing features to an AI instead of typing every line by hand. It's a genuinely useful way to build things faster, not a replacement for actually knowing how they work.</p>
+    <p>My web stack spans <strong>React.js, Node.js, Express.js, and MongoDB</strong>, backed by <strong>AWS Cloud, Docker, and DevOps</strong> practices. On the electrical side, I've worked hands-on with <strong>power electronics, MATLAB/Simulink, microcontroller architectures, and communication protocols</strong> like UART, SPI, and CAN.</p>
+    <p>I vibecoded a full <strong>jewellery management app</strong> for our family shop and shipped <strong>BrowserKit</strong> — a toolkit where everything runs entirely in your browser, so nothing ever gets uploaded and your files stay yours. Both were built quickly by leaning hard on AI tooling, and both still needed real engineering judgment to get right.</p>
+    <p>These days I split my time between <strong>learning LLMs, prompt engineering, agent workflows, and vibecoding new projects</strong> and going deeper on the fundamentals — because knowing how to ask well only works if you know enough to tell a good answer from a confident-sounding wrong one.</p>
   </div>
   <div class="about-stats fade-in">
     <div class="stat-box">
@@ -486,8 +541,8 @@
       <span class="stat-label">Projects built</span>
     </div>
     <div class="stat-box">
-      <span class="stat-num">10+</span>
-      <span class="stat-label">Technologies</span>
+      <span class="stat-num">∞</span>
+      <span class="stat-label">Prompts written</span>
     </div>
     <div class="stat-box">
       <span class="stat-num">AWS</span>
@@ -550,14 +605,27 @@
       </div>
     </div>
     <div class="skill-group">
-      <div class="skill-group-title">Tools &amp; AI-Assisted Dev</div>
+      <div class="skill-group-title">AI &amp; Modern Tooling</div>
       <div class="skill-tags">
         <span class="skill-tag"><i class="devicon-git-plain colored"></i> Git &amp; GitHub</span>
         <span class="skill-tag"><i class="devicon-postman-plain colored"></i> Postman</span>
         <span class="skill-tag"><i class="devicon-vscode-plain colored"></i> VS Code</span>
-        <span class="skill-tag"><i class="devicon-webassembly-plain colored"></i> WebAssembly</span>
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z"/></svg> Prompt Engineering</span>
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg> Agent Loops &amp; LLM Workflows</span>
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20l9-16H3l9 16z"/><path d="M12 20V9"/></svg> Vibecoding</span>
         <span class="skill-tag"><i class="devicon-google-plain colored"></i> Google AI Studio</span>
-        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z"/></svg> Antigravity IDE</span>
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg> Antigravity IDE</span>
+      </div>
+    </div>
+    <div class="skill-group">
+      <div class="skill-group-title">Electrical &amp; Embedded</div>
+      <div class="skill-tags">
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> MATLAB / Simulink</span>
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg> UART, SPI, CAN, ADC/DAC, PWM</span>
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg> MOSFETs, IGBTs, Thyristors, Rectifiers</span>
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 000 20"/></svg> DC-DC/DC-AC Converters, MPPT</span>
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h4l3-8 4 16 3-8h4"/></svg> Power System Protection</span>
+        <span class="skill-tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="7" width="18" height="10" rx="2"/><path d="M23 11v2"/><path d="M5 10v4"/></svg> EV Powertrain, BMS, Motor Controllers</span>
       </div>
     </div>
   </div>
@@ -578,6 +646,44 @@
       </ul>
     </div>
   </div>
+  <div class="exp-item fade-in">
+    <div class="exp-date">Nov 2021 — Apr 2022<br/>Andhra Pradesh</div>
+    <div>
+      <div class="exp-role">Industrial Trainee</div>
+      <div class="exp-company">APSPDCL (AP Southern Power Distribution Company Ltd.)</div>
+      <ul class="exp-bullets">
+        <li>Visited and studied 33/11 kV and 132/33 kV substations and generating stations, including solar and tidal power plants.</li>
+        <li>Gained practical understanding of protection systems, relays, transformers, switchgear, and circuit breakers.</li>
+        <li>Observed real-world power distribution infrastructure and grid connectivity practices.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="section-label fade-in">Education</div>
+  <h2 class="section-title fade-in">What I<br/>studied.</h2>
+  <div class="exp-item fade-in">
+    <div class="exp-date">2022 — 2025<br/>70.93%</div>
+    <div>
+      <div class="exp-role">B.Tech, Electrical and Electronics Engineering</div>
+      <div class="exp-company">Santhiram Engineering College</div>
+    </div>
+  </div>
+  <div class="exp-item fade-in">
+    <div class="exp-date">2019 — 2022<br/>73.10%</div>
+    <div>
+      <div class="exp-role">Diploma, Electrical and Electronics Engineering</div>
+      <div class="exp-company">ESC Government Polytechnic</div>
+    </div>
+  </div>
+  <div class="exp-item fade-in">
+    <div class="exp-date">2018 — 2019<br/>9.7 GPA</div>
+    <div>
+      <div class="exp-role">Secondary School Certificate (SSC)</div>
+      <div class="exp-company">Swami Vivekananda Vidyalaya</div>
+    </div>
+  </div>
 </section>
 
 <section id="projects">
@@ -587,7 +693,7 @@
     <div class="project-card">
       <div class="project-num">01</div>
       <div class="project-title">BrowserKit — Client-Side Web Utilities Suite</div>
-      <p class="project-desc">Privacy-first web toolkit of 20+ browser-native utilities (image compressor, HEIC converter, PDF merger/splitter, video trimmer, AES-256 file vault) built with zero-upload WebAssembly, HTML5 Canvas, and Web Workers architecture.</p>
+      <p class="project-desc">Privacy-first web toolkit of 20+ browser-native utilities (image compressor, HEIC converter, PDF merger/splitter, video trimmer, AES-256 file vault). Everything runs 100% in your browser — nothing is uploaded anywhere, so your files never leave your machine (and I never have to explain a server bill).</p>
       <div class="project-stack">
         <span class="project-tech">React</span>
         <span class="project-tech">TypeScript</span>
@@ -596,10 +702,22 @@
         <span class="project-tech">WebAssembly</span>
         <span class="project-tech">Node.js</span>
       </div>
-      <a href="https://browserkit.onrender.com/" target="_blank" class="project-link">Live Demo</a>
+      <a href="https://browserkit.co.in/" target="_blank" class="project-link">Live Demo</a>
     </div>
     <div class="project-card">
       <div class="project-num">02</div>
+      <div class="project-title">Jewellery Shop Management App</div>
+      <p class="project-desc">Vibecoded an inventory, billing, and customer management app for our family jewellery shop because spreadsheets were staging a rebellion. Built mostly by arguing with an AI about gold rate calculations until it stopped making things up.</p>
+      <div class="project-stack">
+        <span class="project-tech">React Native</span>
+        <span class="project-tech">Node.js</span>
+        <span class="project-tech">MongoDB</span>
+        <span class="project-tech">Vibecoded</span>
+      </div>
+      <span class="project-link" style="cursor: default;">Private / In-House</span>
+    </div>
+    <div class="project-card">
+      <div class="project-num">03</div>
       <div class="project-title">StrangerPulse — Real-Time WebRTC Video &amp; Text Chat</div>
       <p class="project-desc">Peer-to-peer random video/text chat platform featuring sub-2s Socket.IO matchmaking, 1-on-1 WebRTC video streaming with adaptive bitrate control (qHD @ 30 FPS), and dual-tier TURN relay system.</p>
       <div class="project-stack">
@@ -613,7 +731,7 @@
       <a href="https://strangerpulse.onrender.com/" target="_blank" class="project-link">Live Demo</a>
     </div>
     <div class="project-card">
-      <div class="project-num">03</div>
+      <div class="project-num">04</div>
       <div class="project-title">Medical Appointment System</div>
       <p class="project-desc">A full healthcare management platform supporting patients, doctors, and administrators with role-based access control and appointment scheduling.</p>
       <div class="project-stack">
@@ -626,7 +744,7 @@
       <a href="https://github.com/yeswanth-2003/MEDICAL-FRONTEND" target="_blank" class="project-link">View Source</a>
     </div>
     <div class="project-card">
-      <div class="project-num">04</div>
+      <div class="project-num">05</div>
       <div class="project-title">Dockerized Portfolio with CI/CD</div>
       <p class="project-desc">Containerized personal portfolio website using Docker with an Nginx Alpine base image and GitHub Actions CI/CD pipeline for automated multi-stage builds and container registry sync.</p>
       <div class="project-stack">
@@ -638,7 +756,7 @@
       <a href="https://github.com/yeswanth-2003/Portfolio" target="_blank" class="project-link">View Source</a>
     </div>
     <div class="project-card">
-      <div class="project-num">05</div>
+      <div class="project-num">06</div>
       <div class="project-title">Git Repo Search Engine</div>
       <p class="project-desc">A repository discovery app powered by the GitHub REST API with pagination and optimized server-side processing for improved search performance.</p>
       <div class="project-stack">
@@ -649,15 +767,16 @@
       <a href="https://github.com/yeswanth-2003/GIT-REPO-SEARCH" target="_blank" class="project-link">View Source</a>
     </div>
     <div class="project-card">
-      <div class="project-num">06</div>
-      <div class="project-title">NODY Responsive Layout</div>
-      <p class="project-desc">A responsive multi-page website template using semantic HTML and CSS with media queries ensuring cross-device compatibility.</p>
+      <div class="project-num">07</div>
+      <div class="project-title">Hybrid Renewable Energy Grid Integration</div>
+      <p class="project-desc">Academic project simulating a PV + Wind Turbine + Battery Storage system connected to a three-phase grid. Compared PI, Sliding Mode Control, and ANN inverter controllers, with boost converter design, MPPT algorithms, and PLL-based grid synchronization. SMC and ANN outperformed classic PI control under varying irradiation, temperature, and wind conditions.</p>
       <div class="project-stack">
-        <span class="project-tech">HTML5</span>
-        <span class="project-tech">CSS3</span>
-        <span class="project-tech">Responsive Design</span>
+        <span class="project-tech">MATLAB</span>
+        <span class="project-tech">Simulink</span>
+        <span class="project-tech">ANN</span>
+        <span class="project-tech">Sliding Mode Control</span>
       </div>
-      <a href="https://github.com/yeswanth-2003/NODY" target="_blank" class="project-link">View Source</a>
+      <span class="project-link" style="cursor: default;">Academic Project</span>
     </div>
   </div>
 </section>
@@ -665,21 +784,70 @@
 <section id="certifications" style="padding-top: 0;">
   <div class="section-label fade-in">Certifications</div>
   <h2 class="section-title fade-in" style="margin-bottom: 2rem;">Credentials.</h2>
-  <div class="cert-card fade-in">
+  <div class="cert-card fade-in" style="margin-bottom: 1.5rem;">
     <div class="cert-icon">☁</div>
     <div>
       <div class="cert-title">AWS DevOps Engineering Intensive</div>
-      <div class="cert-issuer">Srish Technologies</div>
+      <div class="cert-issuer">Srish Technologies · Feb 2025</div>
       <p style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); margin-top: 0.5rem; line-height: 1.7;">
         Practical experience with AWS EC2, S3, IAM, VPC, Lambda, Linux Administration, Shell Scripting, and Docker. Cloud infrastructure fundamentals and DevOps best practices.
       </p>
+    </div>
+  </div>
+  <div class="cert-card fade-in" style="margin-bottom: 1.5rem;">
+    <div class="cert-icon">🔋</div>
+    <div>
+      <div class="cert-title">Electric Vehicle (EEE) Training</div>
+      <div class="cert-issuer">SkillDzire · AICTE Approved, AP State Council of Higher Education · Jun 2024</div>
+      <p style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); margin-top: 0.5rem; line-height: 1.7;">
+        2-month training covering EV powertrain, battery systems (BMS), motor controllers, charging systems, and power electronics for EVs.
+      </p>
+    </div>
+  </div>
+  <div class="cert-card fade-in" style="margin-bottom: 1.5rem;">
+    <div class="cert-icon">📡</div>
+    <div>
+      <div class="cert-title">IoT Sensors and Devices</div>
+      <div class="cert-issuer">EDX / CurtinX · Verified Certificate · May 2024</div>
+      <p style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); margin-top: 0.5rem; line-height: 1.7;">
+        Verified certificate covering IoT sensor and device fundamentals.
+      </p>
+    </div>
+  </div>
+  <div class="cert-card fade-in">
+    <div class="cert-icon">🌐</div>
+    <div>
+      <div class="cert-title">Introduction to Internet of Things</div>
+      <div class="cert-issuer">NPTEL · Verified, Score 79% · Jan – Apr 2024</div>
+      <p style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--muted); margin-top: 0.5rem; line-height: 1.7;">
+        Verified course covering foundational IoT concepts and applications.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="resumes">
+  <div class="section-label fade-in">Resumes</div>
+  <h2 class="section-title fade-in" style="margin-bottom: 2rem;">Two domains,<br/>two resumes.</h2>
+  <div class="resumes-grid fade-in">
+    <div class="resume-card">
+      <div class="resume-label">For Software / IT Roles</div>
+      <div class="resume-title">MERN Stack Developer Resume</div>
+      <p class="resume-note">If you're an IT recruiter, this is the resume for you — React, Node.js, Express, MongoDB, AWS DevOps, and the projects to back it up.</p>
+      <a href="https://drive.google.com/file/d/1-TVAs16WV7QD7Hw_9xY3_kJ1KIgRmREo/view?usp=sharing" target="_blank" class="resume-btn">View Resume ↗</a>
+    </div>
+    <div class="resume-card">
+      <div class="resume-label">For Electrical Roles</div>
+      <div class="resume-title">Electrical &amp; Electronics Engineering Resume</div>
+      <p class="resume-note">If you're hiring from the Electrical domain, this is the one to look at — power systems, EV tech, embedded protocols, and industrial training.</p>
+      <a href="https://drive.google.com/file/d/1xhpbPoqbzdwfEOrAr423AySmbuSEYzCP/view?usp=sharing" target="_blank" class="resume-btn">View Resume ↗</a>
     </div>
   </div>
 </section>
 
 <section id="contact">
   <h2 class="contact-title fade-in">Let's work<br/>together.</h2>
-  <p class="contact-sub fade-in">Open to full-time roles, freelance projects,<br/>and interesting collaborations.</p>
+  <p class="contact-sub fade-in">Open to full-time roles, freelance projects,<br/>and interesting collaborations. I promise I write real code too, occasionally.</p>
   <div class="contact-links fade-in">
     <a href="mailto:chepuriyeswanth27@gmail.com" class="contact-link">
       <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
@@ -693,16 +861,12 @@
       <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
       LinkedIn
     </a>
-    <a href="tel:+919866954418" class="contact-link">
-      <svg fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 6.75z"/></svg>
-      +91 98669 54418
-    </a>
   </div>
 </section>
 
 <footer>
   <p>© 2025 Chepuri Yeswanth. All rights reserved.</p>
-  <p>🐳 Dockerized &amp; CI/CD with GitHub Actions &amp; Deployed on Vercel </p>
+  <p>🐳 Dockerized &amp; CI/CD with GitHub Actions, built by an electrical engineer who learned to code.</p>
 </footer>
 
 <script>
@@ -721,6 +885,30 @@
       document.body.style.overflow = '';
     });
   });
+
+  // Auto-fit hero name lines so "CHEPURI" / "YESWANTH" always fit the
+  // available width exactly — never wrap, never clip, at any screen size.
+  function fitHeroName() {
+    const lines = document.querySelectorAll('.hero-name > div');
+    const container = document.querySelector('.hero-name');
+    if (!lines.length || !container) return;
+    const baseFontSize = parseFloat(getComputedStyle(container).fontSize);
+    lines.forEach(line => {
+      line.style.fontSize = '';
+      const available = container.clientWidth;
+      const actual = line.scrollWidth;
+      if (actual > available) {
+        const scaled = baseFontSize * (available / actual) * 0.98;
+        line.style.fontSize = scaled + 'px';
+      }
+    });
+  }
+  window.addEventListener('load', fitHeroName);
+  window.addEventListener('resize', () => {
+    clearTimeout(window._heroFitTimer);
+    window._heroFitTimer = setTimeout(fitHeroName, 100);
+  });
+  fitHeroName();
 
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursorRing');
