@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chepuri-yeswanth.onrender.com/sitemap.xml
