@@ -10,7 +10,12 @@
 <meta property="og:title" content="Chepuri Yeswanth — MERN Stack Developer & Electrical Engineer"/>
 <meta property="og:description" content="Full-stack web developer and Electrical & Electronics Engineering graduate building React/Node apps, browser-native tools, and AI-assisted software."/>
 <meta property="og:type" content="website"/>
+<meta property="og:image" content="profile.jpg"/>
 <meta name="robots" content="index, follow"/>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png"/>
+<link rel="icon" type="image/png" sizes="180x180" href="favicon.png"/>
+<link rel="shortcut icon" href="favicon.ico"/>
+<link rel="apple-touch-icon" href="favicon.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet"/>
@@ -203,6 +208,26 @@
 
   /* About */
   #about { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+  .about-photo-card {
+    border: 1px solid var(--border);
+    padding: 0.5rem;
+    background: var(--bg2);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 0 100%);
+  }
+  .about-photo-card img {
+    width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    object-position: center 15%;
+    display: block;
+    filter: grayscale(10%) contrast(105%);
+    transition: filter 0.3s ease;
+  }
+  .about-photo-card:hover img {
+    filter: grayscale(0%) contrast(100%);
+  }
   .about-text p {
     font-family: var(--font-mono); font-size: 0.85rem; color: var(--muted);
     line-height: 1.8; margin-bottom: 1rem;
@@ -526,6 +551,9 @@
   <div class="about-text fade-in">
     <div class="section-label">About me</div>
     <h2 class="section-title">Building for<br/>the web.</h2>
+    <div class="about-photo-card">
+      <img src="profile.jpg" alt="Chepuri Yeswanth"/>
+    </div>
     <p>I started out as an <strong>Electrical and Electronics Engineering graduate</strong> — substations, power systems, embedded protocols, EV powertrains, the works — before falling headfirst into <strong>full-stack web development</strong>. Somewhere in between, I picked up <strong>vibecoding</strong>: describing features to an AI instead of typing every line by hand. It's a genuinely useful way to build things faster, not a replacement for actually knowing how they work.</p>
     <p>My web stack spans <strong>React.js, Node.js, Express.js, and MongoDB</strong>, backed by <strong>AWS Cloud, Docker, and DevOps</strong> practices. On the electrical side, I've worked hands-on with <strong>power electronics, MATLAB/Simulink, microcontroller architectures, and communication protocols</strong> like UART, SPI, and CAN.</p>
     <p>I vibecoded a full <strong>jewellery management app</strong> for our family shop and shipped <strong>BrowserKit</strong> — a toolkit where everything runs entirely in your browser, so nothing ever gets uploaded and your files stay yours. Both were built quickly by leaning hard on AI tooling, and both still needed real engineering judgment to get right.</p>
